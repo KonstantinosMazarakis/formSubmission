@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+
+    <form action="postForm" method="post" class="mt-5">
+        <div class="d-flex flx mb-2">
+            <label style="flex: 1;">First Name: </label>
+            <input  style="flex: 1;" asp-for="FirstName">
+        </div>
+            <span class="text-danger" asp-validation-for="FirstName"></span>
+        <div class="d-flex flx mb-2">
+            <label style="flex: 1;">Last Name: </label>
+            <input asp-for="LastName" style="flex: 1;">
+        </div>
+            <span class="text-danger" asp-validation-for="LastName"></span>
+        <div class="d-flex flx mb-2">
+            <label style="flex: 1;">Age: </label>
+            <input asp-for="Age" style="flex: 1;">
+        </div>
+            <span class="text-danger" asp-validation-for="Age"></span>
+        <div class="d-flex flx mb-2">
+            <label style="flex: 1;">Email Adress: </label>
+            <input asp-for="Email" style="flex: 1;">
+        </div>
+            <span class="text-danger" asp-validation-for="Email"></span>
+        <div class="d-flex flx mb-2">
+            <label style="flex: 1;">Password:  </label>
+            <input asp-for="Password" style="flex: 1;">
+        </div>
+            <span class="text-danger" asp-validation-for="Password"></span>
+        <div class="d-flex flx-2 mt-3">
+            <input type="submit">
+        </div>
+
+    </form>
